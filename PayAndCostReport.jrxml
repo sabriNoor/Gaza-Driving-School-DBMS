@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="po" pageWidth="595" pageHeight="900" columnWidth="550" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="339eca0d-e078-40e0-9e7e-22d29dbd1193">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[ZHJpdmluZ19zY2hvb2wubW9udGhseWZpbmFuY2lhbHN1bW1hcnkgQVMgLDY2LDEzNiwxY2RiN2Fk
+Yi00MWYzLTRmZDMtYjZhNi1hMjgwODBkZGJiYjI7]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT "year",
+	"month",
+	total_payment,
+	total_cost
+FROM driving_school.monthlyfinancialsummary]]>
+	</queryString>
+	<field name="year" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="year"/>
+		<property name="com.jaspersoft.studio.field.label" value="year"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="monthlyfinancialsummary"/>
+	</field>
+	<field name="month" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="month"/>
+		<property name="com.jaspersoft.studio.field.label" value="month"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="monthlyfinancialsummary"/>
+	</field>
+	<field name="total_payment" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="total_payment"/>
+		<property name="com.jaspersoft.studio.field.label" value="total_payment"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="monthlyfinancialsummary"/>
+	</field>
+	<field name="total_cost" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="total_cost"/>
+		<property name="com.jaspersoft.studio.field.label" value="total_cost"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="monthlyfinancialsummary"/>
+	</field>
+	<group name="year">
+		<groupExpression><![CDATA[$F{year}]]></groupExpression>
+	</group>
+	<group name="Group1" isStartNewPage="true">
+		<groupExpression><![CDATA[$F{year}]]></groupExpression>
+		<groupHeader>
+			<band height="41">
+				<textField>
+					<reportElement x="20" y="5" width="100" height="25" uuid="364c76ea-2485-4d54-8432-4c57ac093475"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Bodoni MT Black" size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{year}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="33"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="97" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="554" height="90" backcolor="#26738C" uuid="e8c3518c-503d-461d-a153-f11c3936c2b2"/>
+				<staticText>
+					<reportElement mode="Opaque" x="100" y="9" width="330" height="51" forecolor="#FFFFFF" backcolor="#26738C" uuid="13bce4c5-588c-449a-a431-273fa7259cbf"/>
+					<textElement>
+						<font size="30" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Financial Report]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement mode="Opaque" x="104" y="48" width="291" height="5" uuid="c59abb0f-7488-48c1-9230-aab26ac979c8"/>
+					<graphicElement>
+						<pen lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<image>
+					<reportElement x="10" y="9" width="50" height="50" uuid="7401b446-8e66-4e28-a25e-cd0d291729ff"/>
+					<imageExpression><![CDATA["C:/Users/Kareem Sabri/Downloads/driving-school (6).png"]]></imageExpression>
+				</image>
+				<textField pattern="MMMMM dd, yyyy">
+					<reportElement mode="Opaque" x="445" y="9" width="100" height="30" forecolor="#FFFFFF" backcolor="#26738C" uuid="1b6e1d6d-e159-4035-bf2e-5e47a186eb2d"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<textField pattern="HH:mm">
+					<reportElement mode="Opaque" x="444" y="48" width="100" height="30" forecolor="#FFFFFF" backcolor="#26738C" uuid="69d53781-3498-49d7-a165-366c37f83e3e"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="8" y="59" width="100" height="23" forecolor="#FFFFFF" backcolor="#26738C" uuid="799cb4cd-a292-415c-adf9-eadff75e83f1"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Black" size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Gaza school]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="8" y="11" width="412" height="30" uuid="3a2ed785-d1f2-4288-9f8b-eed4038ebb33"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial Black" size="20" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Payment and Cost details in year:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="10" width="100" height="30" uuid="cd06ecae-3911-48fb-8e07-c60db70adc2b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{year}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="47" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="6" width="554" height="37" backcolor="#26738C" uuid="fac5fa63-b133-4cf9-9392-768160ffb3fb"/>
+				<staticText>
+					<reportElement mode="Opaque" x="390" y="2" width="130" height="30" forecolor="#FFFFFF" backcolor="#26738C" uuid="608e7e82-f9df-4f12-9b2a-34f0e3ebf013">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ffe50d74-7eff-4f14-b2ac-a2783e3b079f"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Total cost]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="210" y="2" width="150" height="30" forecolor="#FFFFFF" backcolor="#26738C" uuid="fb3d8772-d65f-4b87-b085-722f6ffaa02a">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4b879879-1b31-4c49-bf50-88f47bdc8111"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Total payment]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="8" y="3" width="185" height="30" forecolor="#FFFFFF" backcolor="#26738C" uuid="144710f0-49c2-4cea-bc5e-6f13b6319cc3">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a707921-567f-4ccd-a882-3173c8450a47"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Month]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="185" height="30" uuid="eea3c04c-0b27-4b15-a084-53362ee1b552">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cae303fc-60a1-4fa6-b326-74908d7ba60b"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{month}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="0" width="185" height="30" uuid="53fe1740-7eb1-4259-ac82-22d57dff7b7f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="61bb46b1-30f2-4609-b930-fa3f14a05c30"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{total_payment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="185" height="30" uuid="dbae17fc-9cc7-4cd0-b7e9-04a0fe87bd7c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="196c2aa6-cb26-4bbc-9fd8-1fff06ca842b"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{total_cost}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="26" splitType="Stretch"/>
+	</summary>
+</jasperReport>

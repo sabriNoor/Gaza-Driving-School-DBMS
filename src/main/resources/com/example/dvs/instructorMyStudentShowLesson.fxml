@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="643.0" prefWidth="786.0" style="-fx-border-width: 4px 4px 4px 4px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dvs.instructorMyStudentShowLesson">
+    <children>
+        <TableView fx:id="lesson_table" layoutX="53.0" layoutY="93.0" prefHeight="320.0" prefWidth="672.0" style="-fx-border-radius: 0; -fx-border-width: 4px 4px 4px 4px;">
+            <columns>
+                <TableColumn fx:id="LessonId_coiumn" prefWidth="108.0" text="lesson ID" />
+                <TableColumn fx:id="Date_lesson_column" prefWidth="131.99998474121094" text="lesson Date" />
+                <TableColumn fx:id="Time_lesson_column" prefWidth="109.5999755859375" text="Lesson Time" />
+                <TableColumn fx:id="courseID_lesson_column" prefWidth="151.20001220703125" text="Course ID" />
+                <TableColumn fx:id="vehicleID_lesson_column" prefWidth="168.0" style="-fx-border-radius: 40;" text="Vehicle ID" />
+            </columns>
+        </TableView>
+
+
+        <AnchorPane fx:id="updatepanel" layoutX="156.0" layoutY="472.0" prefHeight="142.0" prefWidth="473.0" style="-fx-border-color: #26738c; -fx-border-width: 15px3px3px3px;">
+            <children>
+                <Label fx:id="l221" layoutX="69.0" layoutY="43.0" prefHeight="27.0" prefWidth="112.0" text="Lesson Date:">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <DatePicker fx:id="lessonDate" layoutX="206.0" layoutY="44.0" />
+                <TextField fx:id="lessonTime_field11" layoutX="206.0" layoutY="87.0" promptText="lesson Time" />
+                <Label fx:id="l2211" layoutX="69.0" layoutY="86.0" prefHeight="27.0" prefWidth="112.0" text="Lesson Time:">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Button fx:id="finishup" layoutX="393.0" layoutY="66.0" mnemonicParsing="false" onAction="#finishupdate" prefHeight="39.0" prefWidth="39.0" style="-fx-background-color: transparent;">
+                    <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@checked.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </AnchorPane>
+        <Label layoutX="315.0" layoutY="43.0" text="Veiw Lesson">
+            <font>
+                <Font name="System Bold" size="26.0" />
+            </font>
+        </Label>
+        <Button fx:id="close" layoutX="741.0" mnemonicParsing="false" onAction="#closea" prefHeight="38.0" prefWidth="39.0" style="-fx-background-color: transparent;">
+            <graphic>
+                <FontAwesomeIcon fill="#26738c" glyphName="CLOSE" size="3em" />
+            </graphic>
+        </Button>
+        <Button fx:id="delete" layoutX="397.0" layoutY="424.0" mnemonicParsing="false" onAction="#deletea" prefHeight="32.0" prefWidth="158.0" style="-fx-background-color: #26738c;" text="delete" textFill="WHITE">
+            <font>
+                <Font name="Britannic Bold" size="16.0" />
+            </font>
+        </Button>
+        <Button fx:id="update" layoutX="189.0" layoutY="424.0" mnemonicParsing="false" onAction="#updatea" prefHeight="32.0" prefWidth="165.0" style="-fx-background-color: #26738c;" text="update" textFill="WHITE">
+            <font>
+                <Font name="Britannic Bold" size="16.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

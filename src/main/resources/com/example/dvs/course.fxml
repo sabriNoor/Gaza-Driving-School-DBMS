@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane layoutX="206.0" layoutY="87.0" prefHeight="800.0" prefWidth="1400.0" visible="true" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dvs.course">
+    <children>
+        <AnchorPane fx:id="course_table_pane" layoutX="40.0" layoutY="54.0" prefHeight="495.0" prefWidth="787.0">
+            <children>
+                <TableView fx:id="couese_table" layoutX="7.0" layoutY="35.0" prefHeight="471.0" prefWidth="774.0">
+                    <columns>
+                        <TableColumn fx:id="courseid_column" prefWidth="60.00006103515625" text="CourseId" />
+                        <TableColumn fx:id="cousename_column" prefWidth="104.800048828125" text="Name" />
+                        <TableColumn fx:id="vehicle_type_course_column" prefWidth="88.0" text="Vehicle Tpye" />
+                        <TableColumn fx:id="courseDuration_column" prefWidth="94.4000244140625" text="Duration" />
+                        <TableColumn fx:id="course_costPLesson_column" minWidth="0.0" prefWidth="101.5999755859375" text="Cost per lesson" />
+                        <TableColumn fx:id="studentCountCourse_column" prefWidth="108.800048828125" text="studentNum" />
+                        <TableColumn fx:id="Course_description_column" prefWidth="324.7999267578125" text="Description" />
+                    </columns>
+                </TableView>
+                <TextField fx:id="search" layoutX="113.0" layoutY="1.0" prefHeight="25.0" prefWidth="667.0" promptText="search" />
+                <Label layoutX="33.0" layoutY="-1.0" text="Search" textFill="#26738c">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="course_information1" layoutX="841.0" layoutY="14.0" prefHeight="674.0" prefWidth="338.0" style="-fx-border-color: #26738c; -fx-border-width: 3px 3px 3px 3px; -fx-border-radius: 40; -fx-background-color: transparent; -fx-background-radius: 40;">
+            <children>
+                <VBox fx:id="fill_inf_stu2" layoutX="2.0" prefHeight="495.0" prefWidth="328.0">
+                    <children>
+                        <AnchorPane fx:id="fname_pane21" prefHeight="74.0" prefWidth="300.0">
+                            <children>
+                                <Label fx:id="l12" layoutX="34.0" layoutY="38.0" prefHeight="18.0" prefWidth="76.0" text="Id:">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="courseId_field1" layoutX="144.0" layoutY="39.0" promptText="CourseId" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="fname_pane1" prefHeight="68.0" prefWidth="376.0">
+                            <children>
+                                <Label fx:id="l22" layoutX="28.0" layoutY="20.0" prefHeight="27.0" prefWidth="99.0" text="Name:">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="coursename_field1" layoutX="146.0" layoutY="21.0" promptText="First Name" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="fname_pane12" prefHeight="68.0" prefWidth="376.0">
+                            <children>
+                                <Label fx:id="l32" layoutX="22.0" layoutY="20.0" prefHeight="27.0" prefWidth="122.0" text="Vehicle Type:">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                        <ChoiceBox fx:id="vehicleChoice" layoutX="151.0" layoutY="22.0" prefWidth="150.0" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="fname_pane322" prefHeight="68.0" prefWidth="300.0">
+                            <children>
+                                <Label fx:id="l62" layoutX="14.0" layoutY="20.0" prefHeight="27.0" prefWidth="122.0" text="Duration:">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="duration_field1" layoutX="162.0" layoutY="12.0" promptText="Duration" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="fname_pane211" prefHeight="68.0" prefWidth="300.0">
+                            <children>
+                                <Label fx:id="l72" layoutX="20.0" layoutY="25.0" prefHeight="27.0" prefWidth="166.0" text="Cost per Lesson">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="courseCost_field1" layoutX="160.0" layoutY="26.0" promptText="Cost per lesson" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="fname_pane2113" prefHeight="68.0" prefWidth="300.0">
+                            <children>
+                                <Label fx:id="l82" layoutX="14.0" layoutY="22.0" prefHeight="27.0" prefWidth="112.0" text="Description:">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <TextArea fx:id="Course_description_area" layoutX="120.0" layoutY="9.0" prefHeight="122.0" prefWidth="192.0" promptText="Description" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </VBox>
+                <Button fx:id="addBtn1_course" layoutX="31.0" layoutY="518.0" mnemonicParsing="false" onAction="#add" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #26738c;" text="Add" textFill="WHITE">
+                    <font>
+                        <Font name="Britannic Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="DeleteBtn1_course" layoutX="130.0" layoutY="518.0" mnemonicParsing="false" onAction="#delete" prefWidth="80.0" style="-fx-background-color: #26738c;" text="delete" textFill="WHITE">
+                    <font>
+                        <Font name="Britannic Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="UpdateBtn1_course" layoutX="228.0" layoutY="518.0" mnemonicParsing="false" onAction="#update" prefWidth="80.0" style="-fx-background-color: #26738c;" text="update" textFill="WHITE">
+                    <font>
+                        <Font name="Britannic Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="clearBtn1_course" layoutX="134.0" layoutY="563.0" mnemonicParsing="false" onAction="#clear" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color: #26738c;" text="Clear" textFill="WHITE">
+                    <font>
+                        <Font name="Britannic Bold" size="16.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="OnUpdatePane" layoutX="-14.0" layoutY="539.0" prefHeight="128.0" prefWidth="821.0" visible="false">
+            <children>
+                <Label fx:id="passwordlbl" layoutX="313.0" layoutY="61.0" text="cost:">
+                    <font>
+                        <Font name="Britannic Bold" size="20.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="costf" layoutX="379.0" layoutY="61.0" prefHeight="26.0" prefWidth="62.0" />
+                <Label fx:id="eamillbl" layoutX="74.0" layoutY="61.0" text="duration:">
+                    <font>
+                        <Font name="Britannic Bold" size="20.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="durationf" layoutX="173.0" layoutY="59.0" prefHeight="26.0" prefWidth="99.0" />
+                <Button fx:id="FinishUpdatePane" layoutX="752.0" layoutY="30.0" mnemonicParsing="false" onAction="#FinishUpdate" prefHeight="54.0" prefWidth="46.0" style="-fx-background-color: transparent;">
+                    <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@checked.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Label fx:id="passwordlbl1" layoutX="452.0" layoutY="64.0" text="description:">
+                    <font>
+                        <Font name="Britannic Bold" size="20.0" />
+                    </font>
+                </Label>
+                <TextArea fx:id="desArea" layoutX="562.0" layoutY="44.0" prefHeight="86.0" prefWidth="158.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</Pane>

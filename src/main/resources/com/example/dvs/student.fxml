@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="StuPane" layoutX="206.0" layoutY="90.0" prefHeight="800.0" prefWidth="1400.0" visible="true" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dvs.student">
+    <children>
+        <StackPane fx:id="pane" layoutX="-7.0" prefHeight="800.0" prefWidth="1400.0">
+         <children>
+            <AnchorPane fx:id="p2" prefHeight="800.0" prefWidth="1400.0" />
+         </children></StackPane>
+        <AnchorPane fx:id="student_information" layoutX="860.0" prefHeight="654.0" prefWidth="300.0" style="-fx-border-color: #26738c; -fx-border-width: 3px 3px 3px 3px; -fx-border-radius: 10;">
+            <children>
+                <VBox fx:id="fill_inf_stu" layoutX="2.0" prefHeight="543.0" prefWidth="300.0">
+                    <children>
+                        <AnchorPane fx:id="fname_pane2" prefHeight="74.0" prefWidth="300.0">
+                            <children>
+                                <Label fx:id="l1" layoutX="46.0" layoutY="25.0" prefHeight="18.0" prefWidth="76.0" text="SSN:">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="ssn_field" layoutX="144.0" layoutY="26.0" promptText="SSN" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="fname_pane" prefHeight="68.0" prefWidth="376.0">
+                            <children>
+                                <Label fx:id="l2" layoutX="14.0" layoutY="20.0" prefHeight="27.0" prefWidth="99.0" text="First Name:">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="Fname_field" layoutX="146.0" layoutY="21.0" promptText="First Name" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="fname_pane1" prefHeight="68.0" prefWidth="376.0">
+                            <children>
+                                <Label fx:id="l3" layoutX="14.0" layoutY="21.0" prefHeight="27.0" prefWidth="122.0" text="Second Name:">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="Mname_field" layoutX="154.0" layoutY="22.0" promptText="Second Name" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="fname_pane3" prefHeight="68.0" prefWidth="376.0">
+                            <children>
+                                <Label fx:id="l4" layoutX="23.0" layoutY="24.0" prefHeight="27.0" prefWidth="99.0" text="Last Name:">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="Lname_field" layoutX="153.0" layoutY="21.0" promptText="Last Name" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="fname_pane31" prefHeight="68.0" prefWidth="300.0">
+                            <children>
+                                <Label fx:id="l5" layoutX="24.0" layoutY="22.0" prefHeight="27.0" prefWidth="76.0" text="Gender:">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <RadioButton fx:id="male" layoutX="125.0" layoutY="27.0" mnemonicParsing="false" />
+                                <RadioButton fx:id="female" layoutX="199.0" layoutY="27.0" mnemonicParsing="false" />
+                        <FontAwesomeIcon glyphName="MALE" layoutX="150.0" layoutY="40.0" size="1.7em" />
+                        <FontAwesomeIcon glyphName="FEMALE" layoutX="231.0" layoutY="42.0" size="1.7em" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="fname_pane32" prefHeight="68.0" prefWidth="300.0">
+                            <children>
+                                <Label fx:id="l6" layoutX="14.0" layoutY="20.0" prefHeight="27.0" prefWidth="122.0" text="Date of birth:">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <DatePicker fx:id="birth_choose" layoutX="152.0" layoutY="21.0" prefHeight="26.0" prefWidth="159.0" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="fname_pane21" prefHeight="68.0" prefWidth="300.0">
+                            <children>
+                                <Label fx:id="l7" layoutX="14.0" layoutY="25.0" prefHeight="27.0" prefWidth="166.0" text="Phone Number:">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="phone_field" layoutX="160.0" layoutY="26.0" promptText="Phone Number" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </VBox>
+                <Button fx:id="addBtn" layoutX="28.0" layoutY="558.0" mnemonicParsing="false" onAction="#add" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #26738c;" text="Add" textFill="WHITE">
+                    <font>
+                        <Font name="Britannic Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="Delete" layoutX="127.0" layoutY="558.0" mnemonicParsing="false" onAction="#delete" prefWidth="80.0" style="-fx-background-color: #26738c;" text="delete" textFill="WHITE">
+                    <font>
+                        <Font name="Britannic Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="UpdateBtn" layoutX="225.0" layoutY="558.0" mnemonicParsing="false" onAction="#update" prefWidth="80.0" style="-fx-background-color: #26738c;" text="update" textFill="WHITE">
+                    <font>
+                        <Font name="Britannic Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="clearBtn" layoutX="132.0" layoutY="601.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="69.0" style="-fx-background-color: #26738c;" text="Clear" textFill="WHITE">
+                    <font>
+                        <Font name="Britannic Bold" size="16.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="table_pane" layoutY="94.0" prefHeight="578.0" prefWidth="627.0">
+            <children>
+                <TableView fx:id="student_table" layoutX="4.0" layoutY="-14.0" prefHeight="409.0" prefWidth="842.0">
+                    <columns>
+                        <TableColumn fx:id="sssn" prefWidth="75.0" text="SSN" />
+                        <TableColumn fx:id="sfname" prefWidth="75.0" text="FName" />
+                        <TableColumn fx:id="smname" prefWidth="75.0" text="MName" />
+                        <TableColumn fx:id="slname" prefWidth="75.0" text="LName" />
+                        <TableColumn fx:id="sgender" prefWidth="90.39996337890625" text="Gender" />
+                        <TableColumn fx:id="sbirthd" prefWidth="100.00006103515625" text="Birth date" />
+                        <TableColumn fx:id="phone_student" prefWidth="99.199951171875" text="phone" />
+                        <TableColumn fx:id="semail" prefWidth="150.4000244140625" text="Email" />
+                        <TableColumn fx:id="passwordc" prefWidth="99.2000732421875" text="password" />
+                    </columns>
+                </TableView>
+                <Button fx:id="addEnrollButt" layoutX="252.0" layoutY="421.0" mnemonicParsing="false" onAction="#addEnroll" style="-fx-background-color: #26738c;" text="Add Enrollment" textFill="WHITE">
+                    <font>
+                        <Font name="Britannic Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="add_student_address" layoutX="393.0" layoutY="421.0" mnemonicParsing="false" onAction="#add_address" style="-fx-background-color: #26738c;" text="Add Address" textFill="WHITE">
+                    <font>
+                        <Font name="Britannic Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="view_student_address" layoutX="515.0" layoutY="421.0" mnemonicParsing="false" onAction="#open_view_address" style="-fx-background-color: #26738c;" text="view address" textFill="WHITE">
+                    <font>
+                        <Font name="Britannic Bold" size="16.0" />
+                    </font>
+                </Button>
+                <AnchorPane fx:id="OnUpdatePane" layoutX="4.0" layoutY="450.0" prefHeight="117.0" prefWidth="891.0">
+                    <children>
+                        <Label fx:id="phoneUpdatel" layoutX="177.0" layoutY="61.0" text="Phone:">
+                            <font>
+                                <Font name="Britannic Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="phoneUpdate" layoutX="246.0" layoutY="60.0" prefHeight="26.0" prefWidth="116.0" />
+                        <Label fx:id="passwordlbl" layoutX="574.0" layoutY="59.0" text="Password:">
+                            <font>
+                                <Font name="Britannic Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="passwordUpdate" layoutX="665.0" layoutY="60.0" prefHeight="26.0" prefWidth="122.0" />
+                        <Label fx:id="eamillbl" layoutX="369.0" layoutY="61.0" text="Email:">
+                            <font>
+                                <Font name="Britannic Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="EmailUpdate" layoutX="424.0" layoutY="59.0" />
+                        <Button fx:id="FinishUpdatePane" layoutX="787.0" layoutY="55.0" mnemonicParsing="false" onAction="#FinishUpdate" prefHeight="36.0" prefWidth="36.0" style="-fx-background-color: transparent;">
+                            <graphic>
+                                <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@checked.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+        <TextField fx:id="search" layoutX="143.0" layoutY="33.0" prefHeight="25.0" prefWidth="667.0" promptText="search" />
+        <Label fx:id="sLabel" layoutX="62.0" layoutY="31.0" text="Search" textFill="#26738c">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+    </children>
+</Pane>

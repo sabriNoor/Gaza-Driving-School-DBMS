@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="financial_pane" layoutX="206.0" layoutY="90.0" prefHeight="800.0" prefWidth="1300.0" visible="true" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dvs.Financial">
+   <children>
+      <StackPane fx:id="stackO" prefHeight="800.0" prefWidth="1300.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane layoutX="6.0" layoutY="199.0" prefHeight="46.0" prefWidth="374.0">
+                     <children>
+                        <TextField fx:id="search" layoutX="95.0" layoutY="9.0" prefHeight="27.0" prefWidth="265.0" promptText="search for student" style="-fx-border-color: #26837c; -fx-border-radius: 20;" />
+                        <Label layoutX="24.0" layoutY="9.0" prefHeight="18.0" prefWidth="64.0" text="Search" textFill="#26837c">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <FontAwesomeIcon fill="#26837c" glyphName="SEARCH" layoutX="337.0" layoutY="27.0" />
+                        <FontAwesomeIcon fill="#26837c" glyphName="USER" layoutX="318.0" layoutY="27.0" />
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="report" layoutX="740.0" layoutY="504.0" mnemonicParsing="false" onAction="#report" prefHeight="46.0" prefWidth="238.0" style="-fx-background-color: #26738c;" text="Active enrollment Financial report" textFill="WHITE" />
+                  <Button fx:id="comRep" layoutX="740.0" layoutY="566.0" mnemonicParsing="false" onAction="#compRep" prefHeight="46.0" prefWidth="238.0" style="-fx-background-color: #26738c;" text="Complete enrollment Financial report" textFill="WHITE" />
+                  <Label alignment="BASELINE_CENTER" layoutX="788.0" layoutY="444.0" prefHeight="46.0" prefWidth="126.0" style="-fx-border-radius: 30;" text="Reports" textFill="#8c2673">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="payandcost" layoutX="740.0" layoutY="630.0" mnemonicParsing="false" onAction="#payandcost" prefHeight="46.0" prefWidth="238.0" style="-fx-background-color: #26738c;" text="payment &amp; cost report" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+         </children></StackPane>
+      <Button fx:id="cost_but" alignment="BASELINE_LEFT" layoutX="102.0" layoutY="95.0" mnemonicParsing="false" onAction="#cost" prefHeight="85.0" prefWidth="204.0" style="-fx-background-color: #8c2673;" text="Costs" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="58.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cutting.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="payment_but" alignment="BASELINE_LEFT" layoutX="374.0" layoutY="95.0" mnemonicParsing="false" onAction="#payment" prefHeight="85.0" prefWidth="204.0" style="-fx-background-color: #8c2673;" text="Payments" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="60.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@payment-method.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TableView fx:id="view_table" layoutX="10.0" layoutY="248.0" prefHeight="438.0" prefWidth="671.0">
+        <columns>
+          <TableColumn fx:id="enroll_id" prefWidth="128.79998779296875" text="Enrollment Id" />
+            <TableColumn fx:id="cost_per_lesson" prefWidth="108.0" text="Cost per lesson" />
+          <TableColumn fx:id="lesson_count" prefWidth="94.39999389648438" text="Lesson count" />
+            <TableColumn fx:id="payment_amount_colm" prefWidth="113.60003662109375" text="Payment amount" />
+            <TableColumn fx:id="amount_to_pay_colm" prefWidth="98.39996337890625" text="Amount to pay" />
+            <TableColumn fx:id="stud_name" prefWidth="123.20001220703125" text="Student name" />
+        </columns>
+      </TableView>
+      <PieChart fx:id="chart" layoutX="668.0" layoutY="58.0" prefHeight="337.0" prefWidth="390.0" />
+   </children>
+</Pane>

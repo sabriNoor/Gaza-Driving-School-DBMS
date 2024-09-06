@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_2" pageWidth="650" pageHeight="842" columnWidth="610" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8abac101-5abc-42d1-aa1d-dd00a714429e">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[ZHJpdmluZ19zY2hvb2wubW9udGhseV9lbnJvbGxtZW50X3N1bW1hcnkgQVMgLDMzLDE2OSwyNTAw
+Mzg5NC1iMDQ2LTQxMzctOGFkNi1hNmJmYTNkNDE4MWY7]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+	<subDataset name="Dataset1" uuid="aadb82ab-8841-41ba-931e-7f7b91463c10">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT enrollment_year,
+	enrollment_month,
+	total_enrollments
+FROM driving_school.monthly_enrollment_summary]]>
+		</queryString>
+		<field name="enrollment_year" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.name" value="enrollment_year"/>
+			<property name="com.jaspersoft.studio.field.label" value="enrollment_year"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="monthly_enrollment_summary"/>
+		</field>
+		<field name="enrollment_month" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.name" value="enrollment_month"/>
+			<property name="com.jaspersoft.studio.field.label" value="enrollment_month"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="monthly_enrollment_summary"/>
+		</field>
+		<field name="total_enrollments" class="java.lang.Long">
+			<property name="com.jaspersoft.studio.field.name" value="total_enrollments"/>
+			<property name="com.jaspersoft.studio.field.label" value="total_enrollments"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="monthly_enrollment_summary"/>
+		</field>
+		<group name="enrollment_year">
+			<groupExpression><![CDATA[$F{enrollment_year}]]></groupExpression>
+		</group>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[SELECT enrollment_year,
+	enrollment_month,
+	total_enrollments
+FROM driving_school.monthly_enrollment_summary]]>
+	</queryString>
+	<field name="enrollment_year" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="enrollment_year"/>
+		<property name="com.jaspersoft.studio.field.label" value="enrollment_year"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="monthly_enrollment_summary"/>
+	</field>
+	<field name="enrollment_month" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="enrollment_month"/>
+		<property name="com.jaspersoft.studio.field.label" value="enrollment_month"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="monthly_enrollment_summary"/>
+	</field>
+	<field name="total_enrollments" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="total_enrollments"/>
+		<property name="com.jaspersoft.studio.field.label" value="total_enrollments"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="monthly_enrollment_summary"/>
+	</field>
+	<variable name="total_enrollments1" class="java.lang.Integer" resetType="Group" resetGroup="Group1" calculation="Count">
+		<variableExpression><![CDATA[$F{total_enrollments}]]></variableExpression>
+	</variable>
+	<variable name="total_enrollments2" class="java.lang.Long" resetType="Group" resetGroup="Group1" calculation="Sum">
+		<variableExpression><![CDATA[$F{total_enrollments}]]></variableExpression>
+	</variable>
+	<group name="enrollment_year">
+		<groupExpression><![CDATA[$F{enrollment_year}]]></groupExpression>
+	</group>
+	<group name="Group1" isStartNewPage="true">
+		<groupExpression><![CDATA[$F{enrollment_year}]]></groupExpression>
+		<groupHeader>
+			<band height="45">
+				<textField>
+					<reportElement x="10" y="10" width="190" height="30" uuid="3819e1c0-486f-458e-8efb-679198b03bdd"/>
+					<textElement>
+						<font fontName="Algerian" size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{enrollment_year}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="321">
+				<pieChart>
+					<chart evaluationTime="Page">
+						<reportElement x="10" y="130" width="200" height="180" uuid="6145cc6f-7efe-4c8a-87b2-c760636e422c"/>
+						<chartTitle/>
+						<chartSubtitle/>
+						<chartLegend/>
+					</chart>
+					<pieDataset>
+						<keyExpression><![CDATA[$F{enrollment_month}]]></keyExpression>
+						<valueExpression><![CDATA[$F{total_enrollments}]]></valueExpression>
+					</pieDataset>
+					<piePlot>
+						<plot/>
+						<itemLabel/>
+					</piePlot>
+				</pieChart>
+				<staticText>
+					<reportElement x="148" y="26" width="100" height="30" uuid="8d8fe865-3c57-435f-a9d7-87d5308c7af3"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Total:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="278" y="26" width="138" height="30" uuid="e697ba48-fddd-4828-86a3-51870938459d"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{total_enrollments2}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement mode="Opaque" x="20" y="10" width="571" height="1" backcolor="#26738C" uuid="72a85633-9a7c-408e-b568-9794fe1f30d0"/>
+					<graphicElement>
+						<pen lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<rectangle>
+					<reportElement mode="Opaque" x="30" y="10" width="561" height="10" backcolor="#26738C" uuid="8508cef2-603f-410c-a089-40dbabc40395"/>
+					<graphicElement>
+						<pen lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+				<xyBarChart>
+					<chart evaluationTime="Page">
+						<reportElement x="270" y="110" width="301" height="200" uuid="6cbe1e6d-2c51-42e6-8a8a-4bb56e8d30df"/>
+						<chartTitle/>
+						<chartSubtitle/>
+						<chartLegend/>
+					</chart>
+					<xyDataset>
+						<xySeries>
+							<seriesExpression><![CDATA[$F{enrollment_year}]]></seriesExpression>
+							<xValueExpression><![CDATA[$F{enrollment_month}]]></xValueExpression>
+							<yValueExpression><![CDATA[$F{total_enrollments}]]></yValueExpression>
+						</xySeries>
+					</xyDataset>
+					<barPlot>
+						<plot/>
+						<itemLabel/>
+						<categoryAxisFormat>
+							<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+						</categoryAxisFormat>
+						<valueAxisFormat>
+							<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+						</valueAxisFormat>
+					</barPlot>
+				</xyBarChart>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="96" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="4" y="0" width="606" height="96" forecolor="#FFFFFF" backcolor="#26738C" uuid="0eb571fb-80c3-478e-8330-ba9c3fa4d091"/>
+				<staticText>
+					<reportElement mode="Opaque" x="119" y="9" width="341" height="51" forecolor="#FFFFFF" backcolor="#26738C" uuid="45535273-6d55-48b6-bac6-182005452d84"/>
+					<textElement>
+						<font fontName="Arial Black" size="30"/>
+					</textElement>
+					<text><![CDATA[Enrollment Report]]></text>
+				</staticText>
+				<image>
+					<reportElement x="10" y="9" width="50" height="50" uuid="3d56c693-ed99-4fc9-b31c-155e5b66584a"/>
+					<imageExpression><![CDATA["C:/Users/Kareem Sabri/Downloads/driving-school (6).png"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="60" width="100" height="30" forecolor="#FFFFFF" backcolor="#26738C" uuid="24988cdf-f432-42f1-9285-ba65fa19ecbe"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Black" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Gaza school]]></text>
+				</staticText>
+				<textField pattern="MMMMM dd, yyyy">
+					<reportElement mode="Opaque" x="490" y="27" width="110" height="30" forecolor="#FFFFFF" backcolor="#26738C" uuid="23d5a7ed-287d-43b2-ba13-01ee56c78b97"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<textField pattern="HH:mm">
+					<reportElement mode="Opaque" x="487" y="58" width="113" height="30" forecolor="#FFFFFF" backcolor="#26738C" uuid="dd41ed61-f60e-4150-8601-6f54879f96ac"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement x="119" y="49" width="361" height="5" uuid="e2b7b483-b785-499b-86b3-ec66884006aa"/>
+					<graphicElement>
+						<pen lineColor="#FFFFFF"/>
+					</graphicElement>
+				</rectangle>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="69" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="8" width="561" height="48" uuid="ef20a926-5f77-4b87-a17a-0efb5ba51394"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Enrollment details in year:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="340" y="14" width="251" height="41" uuid="425ad4ce-ab7e-4332-aa71-a4844ff54d9b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{enrollment_year}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="57" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="4" y="5" width="606" height="52" forecolor="#FFFFFF" backcolor="#26738C" uuid="da8725d5-6de0-4175-8818-4cf8cc4f4307"/>
+				<staticText>
+					<reportElement mode="Opaque" x="104" y="11" width="134" height="30" forecolor="#FFFFFF" backcolor="#26738C" uuid="5a5c77b0-9191-4156-8a72-c90209e3443a">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="de1cc7da-858c-4722-8586-961945c974ad"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Enrollment month]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="282" y="11" width="134" height="30" forecolor="#FFFFFF" backcolor="#26738C" uuid="42f18a28-a13d-4503-b300-d025a77b741e">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a34779e3-e5e3-4bd9-bdab-ba5aca7c826f"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Count enrollments]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="110" y="0" width="138" height="30" uuid="83e362be-4d26-4c55-b38d-6c60c592bf61">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="de1cc7da-858c-4722-8586-961945c974ad"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{enrollment_month}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="0" width="138" height="30" uuid="9d3106ee-b0da-4827-95fb-932bc8b0e4a3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a34779e3-e5e3-4bd9-bdab-ba5aca7c826f"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_enrollments}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

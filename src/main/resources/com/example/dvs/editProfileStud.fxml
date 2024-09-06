@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dvs.stuEditProf">
+   <children>
+      <AnchorPane fx:id="infoPane" layoutX="163.0" layoutY="239.0" prefHeight="211.0" prefWidth="298.0" style="-fx-border-color: #26738c; -fx-border-radius: 25;" visible="false">
+         <children>
+            <Label layoutX="34.0" layoutY="56.0" text="SSN:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="93.0" text="Email:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="StuSsn" layoutX="85.0" layoutY="56.0" prefHeight="27.0" prefWidth="184.0" text="0000">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="stuEmail" layoutX="85.0" layoutY="93.0" prefHeight="27.0" prefWidth="184.0" text="0000">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="pasChangeBut" layoutX="46.0" layoutY="142.0" mnemonicParsing="false" onAction="#passToChange" prefHeight="26.0" prefWidth="206.0" style="-fx-background-color: #83265c;" text="Change my password" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="studImage" fitHeight="150.0" fitWidth="200.0" layoutX="199.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@student%20(1).png" />
+         </image></ImageView>
+      <AnchorPane fx:id="pasChange" layoutX="118.0" layoutY="230.0" prefHeight="211.0" prefWidth="398.0" style="-fx-border-color: #26738c; -fx-border-radius: 25;" visible="false">
+         <children>
+            <Label layoutX="108.0" layoutY="55.0" text="Password:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="93.0" text="Confrimed Password:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="save" layoutX="129.0" layoutY="152.0" mnemonicParsing="false" onAction="#save" prefHeight="31.0" prefWidth="139.0" style="-fx-background-color: #83265c;" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <PasswordField fx:id="pas" layoutX="211.0" layoutY="56.0" promptText="new password" />
+            <PasswordField fx:id="ConfPas" layoutX="212.0" layoutY="94.0" promptText="conf password" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="name" layoutX="213.0" layoutY="184.0" prefHeight="35.0" prefWidth="218.0" text="name*******">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

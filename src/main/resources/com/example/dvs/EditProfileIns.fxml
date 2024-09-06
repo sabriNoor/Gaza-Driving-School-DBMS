@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="email" prefHeight="652.0" prefWidth="722.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dvs.EditProfileIns">
+    <children>
+        <ImageView fx:id="image" fitHeight="200.0" fitWidth="248.0" layoutX="206.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@teacherins.png" />
+            </image>
+        </ImageView>
+        <Label fx:id="welcomeName" alignment="CENTER" layoutX="133.0" layoutY="234.0" prefHeight="39.0" prefWidth="354.0" text="Name">
+            <font>
+                <Font name="System Bold" size="27.0" />
+            </font>
+        </Label>
+        <Label fx:id="salary" layoutX="297.0" layoutY="339.0" prefHeight="39.0" prefWidth="131.0" text="salary">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="changeAccountInfo" layoutX="208.0" layoutY="439.0" mnemonicParsing="false" onAction="#changeAccountInfo" prefHeight="39.0" prefWidth="227.0" style="-fx-background-color: #26738c; -fx-background-radius: 40;" text="change my acount information" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font></Button>
+        <AnchorPane fx:id="checkpasspanel" layoutX="134.0" layoutY="501.0" prefHeight="91.0" prefWidth="376.0" visible="false">
+            <children>
+                <Label layoutX="24.0" layoutY="19.0" text="current password:">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <PasswordField fx:id="password" layoutX="153.0" layoutY="17.0" />
+                <Button fx:id="checkpass" layoutX="310.0" layoutY="8.0" mnemonicParsing="false" onAction="#testPass" prefHeight="39.0" prefWidth="42.0">
+                    <graphic>
+                        <ImageView fitHeight="62.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@checked.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Label fx:id="wrongpass" layoutX="65.0" layoutY="51.0" textFill="#ac0b0b" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="updatepanel" layoutX="38.0" layoutY="479.0" prefHeight="158.0" prefWidth="622.0" visible="false">
+            <children>
+                <TextField fx:id="emailf" layoutX="190.0" layoutY="17.0" prefHeight="26.0" prefWidth="234.0" />
+                <PasswordField fx:id="newpass1" layoutX="191.0" layoutY="55.0" promptText="New password" />
+                <PasswordField fx:id="newpass2" layoutX="191.0" layoutY="86.0" promptText="Confirm password" />
+                <Button fx:id="show1" layoutX="348.0" layoutY="57.0" mnemonicParsing="false" onAction="#show111" style="-fx-background-color: transparent;" text="show password" textFill="#940404">
+                    <font>
+                        <Font size="10.0" />
+                    </font>
+                </Button>
+                <Button fx:id="show2" layoutX="348.0" layoutY="88.0" mnemonicParsing="false" onAction="#show222" style="-fx-background-color: transparent;" text="show password" textFill="#940404">
+                    <font>
+                        <Font size="10.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="53.0" fitWidth="43.0" layoutX="125.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@mail.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="61.0" fitWidth="71.0" layoutX="116.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@password.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="exitxhange" layoutX="438.0" layoutY="15.0" mnemonicParsing="false" onAction="#exitpan" prefHeight="44.0" prefWidth="62.0" style="-fx-background-color: transparent;">
+                    <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@app.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="finishchangepassword" layoutX="439.0" layoutY="68.0" mnemonicParsing="false" onAction="#finishup" prefHeight="44.0" prefWidth="51.0" style="-fx-background-color: transperent;">
+                    <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@checked.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </AnchorPane>
+        <Label fx:id="emaill" layoutX="293.0" layoutY="370.0" prefHeight="39.0" prefWidth="354.0" text="Email">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="232.0" layoutY="337.0" prefHeight="44.0" prefWidth="81.0" text="Salary:">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="232.0" layoutY="368.0" prefHeight="44.0" prefWidth="81.0" text="Email:">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="232.0" layoutY="300.0" prefHeight="44.0" prefWidth="131.0" text="lincense num:">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="License" layoutX="363.0" layoutY="300.0" prefHeight="39.0" prefWidth="215.0" text="lincense num">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="issn" layoutX="284.0" layoutY="273.0" prefHeight="43.0" prefWidth="78.0" text="ssn">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="223.0" layoutY="273.0" prefHeight="43.0" prefWidth="64.0" text="Ssn:">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

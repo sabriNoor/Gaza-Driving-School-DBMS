@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="add_Address_page" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="348.0" style="-fx-background-radius: 30; -fx-border-color: #36738c; -fx-border-width: 4px; -fx-border-radius: 30;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dvs.StudentAddressAdd">
+    <children>
+        <VBox fx:id="vbox1" layoutX="-1.0" layoutY="113.0" prefHeight="312.0" prefWidth="348.0">
+            <children>
+                <AnchorPane fx:id="an1" prefHeight="99.0" prefWidth="348.0">
+                    <children>
+                        <Label fx:id="cityl1" layoutX="100.0" layoutY="38.0" prefHeight="22.0" prefWidth="54.0" text="City:">
+                            <font>
+                                <Font name="Britannic Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="city_field" layoutX="174.0" layoutY="37.0" promptText="city" />
+                        <ImageView fx:id="city_img" fitHeight="42.0" fitWidth="37.0" layoutX="44.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@buildings.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="an2" prefHeight="99.0" prefWidth="348.0">
+                    <children>
+                        <Label fx:id="strl1" layoutX="92.0" layoutY="38.0" prefHeight="22.0" prefWidth="69.0" text="Street:">
+                            <font>
+                                <Font name="Britannic Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="street_field" layoutX="174.0" layoutY="36.0" promptText="street" />
+                        <ImageView fx:id="street_img" fitHeight="49.0" fitWidth="37.0" layoutX="44.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@motorway.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="inc3" prefHeight="99.0" prefWidth="348.0">
+                    <children>
+                        <Label fx:id="housel" layoutX="65.0" layoutY="38.0" prefHeight="22.0" prefWidth="142.0" text="House Number:">
+                            <font>
+                                <Font name="Britannic Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="house_num_field" layoutX="208.0" layoutY="36.0" prefHeight="26.0" prefWidth="100.0" promptText="house number" />
+                        <ImageView fx:id="house_img" fitHeight="37.0" fitWidth="37.0" layoutX="21.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@house-numbering.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+        <AnchorPane fx:id="inc_title" layoutX="-1.0" layoutY="-1.0" prefHeight="114.0" prefWidth="348.0">
+            <children>
+                <ImageView fx:id="titlt_img" fitHeight="87.0" fitWidth="84.0" layoutX="27.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@home (1).png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="titlr_label" layoutX="147.0" layoutY="51.0" text="Add Address" textFill="#26738c">
+                    <font>
+                        <Font name="Britannic Bold" size="25.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Button fx:id="addAddress_Btn" layoutX="109.0" layoutY="450.0" mnemonicParsing="false" onAction="#Addaddress" prefHeight="42.0" prefWidth="112.0" style="-fx-background-color: #36738c; -fx-border-radius: 20; -fx-background-radius: 20;" text="Add" textFill="WHITE">
+            <font>
+                <Font name="Britannic Bold" size="25.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

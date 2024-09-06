@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="labelsearch" prefHeight="652.0" prefWidth="722.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dvs.instructorMyStudent">
+    <children>
+        <TableView fx:id="myStudentTable" layoutX="16.0" layoutY="141.0" prefHeight="200.0" prefWidth="690.0">
+            <columns>
+                <TableColumn fx:id="enrollcol" prefWidth="82.39996337890625" text="EnrollmentId" />
+                <TableColumn fx:id="ssncol" prefWidth="69.60002899169922" text="SSN" />
+                <TableColumn fx:id="fnamecol" prefWidth="68.0" text="Name" />
+                <TableColumn fx:id="lnamecol" prefWidth="84.79998779296875" text="Lname" />
+                <TableColumn fx:id="phonecol" prefWidth="78.4000244140625" text="phone" />
+                <TableColumn fx:id="courseidcol" prefWidth="66.4000244140625" text="courseid" />
+                <TableColumn fx:id="coursenamecol" prefWidth="125.5999755859375" text="coursename" />
+                <TableColumn fx:id="countlesson" prefWidth="120.79998779296875" text="#lesson" />
+            </columns>
+        </TableView>
+        <Button fx:id="addlesson" layoutX="70.0" layoutY="355.0" mnemonicParsing="false" onAction="#addlesson" prefHeight="26.0" prefWidth="139.0" style="-fx-background-color: #26738c;" text="Add Lesson" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font></Button>
+        <Button fx:id="showlesson" layoutX="229.0" layoutY="355.0" mnemonicParsing="false" onAction="#show_lesson" prefHeight="26.0" prefWidth="139.0" style="-fx-background-color: #26738c;" text="Show Lesson" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font></Button>
+        <Button fx:id="viewAddress" layoutX="387.0" layoutY="355.0" mnemonicParsing="false" onAction="#viewAddress" prefHeight="31.0" prefWidth="139.0" style="-fx-background-color: #26738c;" text="View address" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font></Button>
+        <Label layoutX="332.0" layoutY="86.0" prefHeight="42.0" prefWidth="174.0" text="Student">
+            <font>
+                <Font name="Arial Bold" size="26.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="70.0" layoutY="421.0" prefHeight="167.0" prefWidth="542.0" style="-fx-border-width: 3px 3px 3px 3px; -fx-border-color: #26738c; -fx-border-radius: 30;">
+            <children>
+                <TextField fx:id="searchbox" layoutX="160.0" layoutY="99.0" prefHeight="26.0" prefWidth="286.0" promptText="Search" />
+                <FontAwesomeIcon fill="#26738c" glyphName="SEARCH" layoutX="118.0" layoutY="121.0" selectionFill="#26738c" size="2em" wrappingWidth="27.05715560913086" />
+                <Label layoutX="51.0" layoutY="51.0" prefHeight="22.0" prefWidth="76.0" text="Search By:">
+                    <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                    </font>
+                </Label>
+                <RadioButton fx:id="ssnRadio" layoutX="129.0" layoutY="51.0" mnemonicParsing="false" text="SSN" />
+                <RadioButton fx:id="studentRadio" layoutX="181.0" layoutY="51.0" mnemonicParsing="false" text="Student Name" />
+                <RadioButton fx:id="courseIdRadio" layoutX="291.0" layoutY="51.0" mnemonicParsing="false" text="CourseId" />
+                <RadioButton fx:id="courseNameRadio" layoutX="373.0" layoutY="51.0" mnemonicParsing="false" text="CourseName" />
+                <Label fx:id="lsearch" layoutX="176.0" layoutY="134.0" prefHeight="18.0" prefWidth="308.0" textFill="#990000" />
+            </children>
+        </AnchorPane>
+        <ImageView fitHeight="103.0" fitWidth="119.0" layoutX="229.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@students.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="referesh" layoutX="548.0" layoutY="355.0" mnemonicParsing="false" onAction="#referesh" prefHeight="31.0" prefWidth="130.0" style="-fx-background-color: #26738c;" text="Referesh Table" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
